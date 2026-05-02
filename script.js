@@ -380,3 +380,39 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => { document.body.style.opacity = '1'; }, 100);
 
 });
+
+/* ========== CHATBOT WIDGET ========== */
+(function () {
+  const chatFab   = document.getElementById('chat-fab');
+  const chatPanel = document.getElementById('chat-panel');
+  const chatClose = document.getElementById('chat-panel-close');
+  const openIcon  = chatFab.querySelector('.open-icon');
+  const closeIcon = chatFab.querySelector('.close-icon');
+
+  function openChat() {
+    chatPanel.classList.add('open');
+    chatPanel.setAttribute('aria-hidden', 'false');
+    openIcon.style.display  = 'none';
+    closeIcon.style.display = 'flex';
+    chatFab.querySelector('.chat-fab-pulse').style.animation = 'none';
+  }
+
+  function closeChat() {
+    chatPanel.classList.remove('open');
+    chatPanel.setAttribute('aria-hidden', 'true');
+    openIcon.style.display  = 'flex';
+    closeIcon.style.display = 'none';
+    chatFab.querySelector('.chat-fab-pulse').style.animation = '';
+  }
+
+  chatFab.addEventListener('click', () => {
+    chatPanel.classList.contains('open') ? closeChat() : openChat();
+  });
+
+  chatClose.addEventListener('click', closeChat);
+
+  // Close on Escape key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && chatPanel.classList.contains('open')) closeChat();
+  });
+}());

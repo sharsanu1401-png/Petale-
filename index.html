@@ -452,6 +452,42 @@
 
   <a href="#top" class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></a>
 
+  <!-- ========== CHATBOT WIDGET ========== -->
+  <!-- Floating chat button -->
+  <button id="chat-fab" class="chat-fab" aria-label="Open Pétale Skin Assistant" title="Chat with us ✿">
+    <span class="chat-fab-icon open-icon"><i class="fas fa-comment-dots"></i></span>
+    <span class="chat-fab-icon close-icon" style="display:none"><i class="fas fa-times"></i></span>
+    <span class="chat-fab-pulse"></span>
+  </button>
+
+  <!-- Chat popup panel -->
+  <div id="chat-panel" class="chat-panel" role="dialog" aria-label="Pétale Skin Assistant" aria-hidden="true">
+    <div class="chat-panel-header">
+      <div class="chat-header-info">
+        <span class="chat-avatar">✿</span>
+        <div>
+          <strong class="chat-name">Pétale Assistant</strong>
+          <span class="chat-status"><span class="chat-dot"></span> Online</span>
+        </div>
+      </div>
+      <button id="chat-panel-close" class="chat-panel-close" aria-label="Close chat">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="chat-panel-body">
+      <iframe
+        src="https://www.chatbase.co/chatbot-iframe/PDMpiGnMR_oniJMMgumIn"
+        width="100%"
+        style="height:100%;border:none;"
+        frameborder="0"
+        allow="microphone"
+        title="Pétale Skin Co. AI Assistant"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+  <!-- END CHATBOT WIDGET -->
+
   <script src="script.js"></script>
 </body>
 </html>
