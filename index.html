@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pétale Skin Co. — Premium botanical skincare kits for young women. Bloom into your best skin with our luxury herbal skincare collections." />
+  <meta name="keywords" content="skincare, botanical skincare, herbal skincare, luxury skincare, glow kit, natural ingredients" />
+  <meta name="author" content="Pétale Skin Co." />
+  <title>Pétale Skin Co. | Bloom Into Your Best Skin</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light-theme" id="top">
+
+  <!-- ========== LOADING SCREEN ========== -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-petal">✿</div>
+      <p class="loader-text">Pétale Skin Co.</p>
+    </div>
+  </div>
+
+  <!-- ========== CUSTOM CURSOR ========== -->
+  <div id="cursor" class="cursor"></div>
+  <div id="cursor-follower" class="cursor-follower"></div>
+
+  <!-- ========== FLOATING FLORALS ========== -->
+  <div class="floral-bg" aria-hidden="true">
+    <span class="floral f1">✿</span>
+    <span class="floral f2">❀</span>
+    <span class="floral f3">✾</span>
+    <span class="floral f4">✿</span>
+    <span class="floral f5">❀</span>
+    <span class="floral f6">✾</span>
+    <span class="floral f7">✿</span>
+  </div>
+
+  <!-- ========== CART POPUP ========== -->
+  <div id="cart-popup" class="cart-popup" role="dialog" aria-label="Shopping Cart">
+    <div class="cart-popup-inner">
+      <button class="cart-close" id="cart-close" aria-label="Close cart">&times;</button>
+      <h3 class="cart-title"><i class="fas fa-shopping-bag"></i> Your Bag</h3>
+      <div id="cart-items" class="cart-items">
+        <p class="cart-empty">Your bag is empty. <br/>Add a kit to begin your ritual.</p>
+      </div>
+      <div class="cart-footer" id="cart-footer" style="display:none">
+        <div class="cart-total" id="cart-total">Total: ₹0</div>
+        <button class="btn-primary cart-checkout">Checkout</button>
+      </div>
+    </div>
+  </div>
+  <div id="cart-overlay" class="cart-overlay"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#top" class="nav-logo" aria-label="Pétale Skin Co. Home">
+        <span class="logo-petal">✿</span> Pétale Skin Co.
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#products" class="nav-link">Kits</a></li>
+        <li><a href="#why-us" class="nav-link">Why Us</a></li>
+        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#newsletter" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <button id="cart-btn" class="icon-btn cart-icon-btn" aria-label="Open cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-badge" id="cart-badge">0</span>
+        </button>
+        <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="hero" class="hero" aria-label="Hero banner">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-content reveal-hero">
+      <p class="hero-pre-title">Botanical Luxury Skincare</p>
+      <h1 class="hero-title">Bloom Into Your<br /><em>Best Skin</em></h1>
+      <p class="hero-subtitle">Handcrafted herbal skincare kits designed for the modern young woman — clean, conscious, and utterly beautiful.</p>
+      <div class="hero-cta">
+        <a href="#products" class="btn-primary" id="hero-shop-btn">Shop Now</a>
+        <a href="#products" class="btn-outline" id="hero-explore-btn">Explore Kits</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Natural</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">15K+</span><span class="stat-label">Happy Skin</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">0</span><span class="stat-label">Toxins</span></div>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <img src="hero_skincare_1777705884987.png" alt="Pétale Skin Co. luxury botanical skincare products" class="hero-img" />
+    </div>
+    <a href="#about" class="scroll-down" aria-label="Scroll down">
+      <span class="scroll-dot"></span>
+    </a>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section id="about" class="about section-pad" aria-label="About Pétale Skin Co.">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <span class="section-tag">Our Story</span>
+          <h2 class="section-title">Where Botanicals<br /><em>Meet Beauty</em></h2>
+          <p class="about-desc">Pétale Skin Co. was born from a simple belief — that nature holds the most powerful ingredients for radiant skin. We source the finest botanical extracts, from rose hip oil to turmeric and neem, blending them into luxurious rituals your skin will love.</p>
+          <p class="about-desc">Every kit is thoughtfully curated for real women living real lives — students, dreamers, go-getters — who deserve skin that glows effortlessly.</p>
+          <div class="about-pillars">
+            <div class="pillar"><i class="fas fa-leaf"></i><span>Botanical Extracts</span></div>
+            <div class="pillar"><i class="fas fa-recycle"></i><span>Eco Packaging</span></div>
+            <div class="pillar"><i class="fas fa-heart"></i><span>Cruelty Free</span></div>
+          </div>
+          <a href="#products" class="btn-primary">Explore Our Kits</a>
+        </div>
+        <div class="about-visual reveal-right">
+          <div class="about-card glass-card">
+            <div class="about-badge">✿ Est. 2022</div>
+            <div class="about-img-wrap">
+              <img src="glow_kit_1777705900508.png" alt="Pétale botanical ingredients" class="about-img" />
+            </div>
+            <div class="about-card-text">
+              <h4>Crafted with Intention</h4>
+              <p>Each formula is dermatologist-tested, free from parabens, sulfates, and synthetic dyes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRODUCTS SECTION ========== -->
+  <section id="products" class="products section-pad" aria-label="Product Kits">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Our Collections</span>
+        <h2 class="section-title">Skincare Kits<br /><em>Crafted for You</em></h2>
+        <p class="section-sub">Every kit is a complete botanical ritual — beautifully packaged and perfectly curated.</p>
+      </div>
+      <div class="products-grid">
+
+        <!-- Glow Kit -->
+        <article class="product-card reveal-up" id="product-glow">
+          <div class="product-img-wrap">
+            <img src="glow_kit_1777705900508.png" alt="Glow Kit - Premium botanical glow skincare set" class="product-img" />
+            <div class="product-badge">Bestseller</div>
+            <div class="product-overlay">
+              <p>Rose hip, Vitamin C & turmeric infused glow ritual for luminous skin.</p>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Glow Kit</h3>
+            <p class="product-tagline">Radiance Ritual</p>
+            <div class="product-footer">
+              <span class="product-price">₹1,299</span>
+              <button class="btn-add-cart" data-name="Glow Kit" data-price="1299" aria-label="Add Glow Kit to cart">
+                <i class="fas fa-shopping-bag"></i> Add to Bag
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Exam Night Kit -->
+        <article class="product-card reveal-up" id="product-exam" style="animation-delay:0.1s">
+          <div class="product-img-wrap">
+            <img src="exam_kit_1777705994730.png" alt="Exam Night Kit - Calming skincare for study nights" class="product-img" />
+            <div class="product-badge new-badge">New</div>
+            <div class="product-overlay">
+              <p>Lavender, chamomile & aloe vera to calm your skin during stressful nights.</p>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Exam Night Kit</h3>
+            <p class="product-tagline">Calm & Restore</p>
+            <div class="product-footer">
+              <span class="product-price">₹999</span>
+              <button class="btn-add-cart" data-name="Exam Night Kit" data-price="999" aria-label="Add Exam Night Kit to cart">
+                <i class="fas fa-shopping-bag"></i> Add to Bag
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fresh Start Kit -->
+        <article class="product-card reveal-up" id="product-fresh" style="animation-delay:0.2s">
+          <div class="product-img-wrap">
+            <img src="fresh_start_kit_1777706042981.png" alt="Fresh Start Kit - Morning skincare routine" class="product-img" />
+            <div class="product-overlay">
+              <p>Vitamin C, neem & green tea for a fresh, clean morning routine.</p>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Fresh Start Kit</h3>
+            <p class="product-tagline">Morning Ritual</p>
+            <div class="product-footer">
+              <span class="product-price">₹1,099</span>
+              <button class="btn-add-cart" data-name="Fresh Start Kit" data-price="1099" aria-label="Add Fresh Start Kit to cart">
+                <i class="fas fa-shopping-bag"></i> Add to Bag
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Festive Edition Box -->
+        <article class="product-card reveal-up festive-card" id="product-festive" style="animation-delay:0.3s">
+          <div class="product-img-wrap">
+            <img src="festive_box_1777706559785.png" alt="Festive Edition Box - Luxury gift skincare set" class="product-img" />
+            <div class="product-badge festive-badge">Limited</div>
+            <div class="product-overlay">
+              <p>Our most luxurious gift set — perfect for celebrations and gifting your loved ones.</p>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Festive Edition Box</h3>
+            <p class="product-tagline">Luxury Gift Set</p>
+            <div class="product-footer">
+              <span class="product-price">₹2,499</span>
+              <button class="btn-add-cart" data-name="Festive Edition Box" data-price="2499" aria-label="Add Festive Edition Box to cart">
+                <i class="fas fa-shopping-bag"></i> Add to Bag
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY CHOOSE US ========== -->
+  <section id="why-us" class="why-us section-pad" aria-label="Why choose Pétale">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">The Pétale Promise</span>
+        <h2 class="section-title">Why Women<br /><em>Love Pétale</em></h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card glass-card reveal-up">
+          <div class="why-icon"><i class="fas fa-seedling"></i></div>
+          <h3>Natural Ingredients</h3>
+          <p>100% botanical extracts — no parabens, no sulfates, no synthetic fragrances. Just pure plant power.</p>
+        </div>
+        <div class="why-card glass-card reveal-up" style="animation-delay:0.1s">
+          <div class="why-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h3>Student-Friendly Luxury</h3>
+          <p>Premium quality at accessible prices. Because every young woman deserves a luxurious skin ritual.</p>
+        </div>
+        <div class="why-card glass-card reveal-up" style="animation-delay:0.2s">
+          <div class="why-icon"><i class="fas fa-suitcase-rolling"></i></div>
+          <h3>Travel-Friendly</h3>
+          <p>Compact, TSA-approved kits designed for life on the go — hostel, campus, or getaway.</p>
+        </div>
+        <div class="why-card glass-card reveal-up" style="animation-delay:0.3s">
+          <div class="why-icon"><i class="fas fa-recycle"></i></div>
+          <h3>Eco-Conscious Packaging</h3>
+          <p>Recyclable materials, minimal plastic, and biodegradable wrapping — beautiful inside and out.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section id="testimonials" class="testimonials section-pad" aria-label="Customer testimonials">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Skin Stories</span>
+        <h2 class="section-title">What Our<br /><em>Community Says</em></h2>
+      </div>
+      <div class="testimonial-slider-wrap">
+        <div class="testimonial-slider" id="testimonial-slider">
+
+          <div class="testimonial-card glass-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"The Glow Kit literally transformed my skin in 3 weeks. I get compliments every day now. The packaging is so pretty I almost didn't want to open it!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">A</div>
+              <div>
+                <strong>Ananya S.</strong>
+                <span>Delhi University, 21</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Bought the Exam Night Kit during finals and it was a lifesaver. The lavender face mist helped me destress and my skin stayed hydrated through all those late nights."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">P</div>
+              <div>
+                <strong>Priya M.</strong>
+                <span>Mumbai, 23</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"I gifted the Festive Edition Box to my sister and she absolutely loved it. The unboxing experience was so premium — felt like opening a gift from a designer brand."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">R</div>
+              <div>
+                <strong>Riya K.</strong>
+                <span>Bangalore, 26</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card">
+            <div class="stars">★★★★☆</div>
+            <p class="testimonial-text">"Clean ingredients, gorgeous packaging, and my skin has never been happier. The Fresh Start Kit is part of my daily morning routine now."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">S</div>
+              <div>
+                <strong>Simran T.</strong>
+                <span>Chandigarh, 24</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Finally a skincare brand that feels truly luxurious without costing a fortune. Pétale is exactly what I was looking for. Obsessed with the sage green aesthetic!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">N</div>
+              <div>
+                <strong>Neha V.</strong>
+                <span>Pune, 22</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn" id="slider-prev" aria-label="Previous review"><i class="fas fa-chevron-left"></i></button>
+          <div class="slider-dots" id="slider-dots"></div>
+          <button class="slider-btn" id="slider-next" aria-label="Next review"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INSTAGRAM GALLERY ========== -->
+  <section id="gallery" class="gallery section-pad" aria-label="Instagram feed gallery">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">@petaleskinco</span>
+        <h2 class="section-title">Follow Our<br /><em>Skin Journey</em></h2>
+        <p class="section-sub">Tag us in your glow-up with <strong>#PétaleSkin</strong> for a chance to be featured.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item reveal-up"><img src="glow_kit_1777705900508.png" alt="Glow Kit lifestyle" /><div class="gallery-overlay"><i class="fab fa-instagram"></i></div></div>
+        <div class="gallery-item reveal-up" style="animation-delay:0.05s"><img src="hero_skincare_1777705884987.png" alt="Botanical skincare flat lay" /><div class="gallery-overlay"><i class="fab fa-instagram"></i></div></div>
+        <div class="gallery-item reveal-up" style="animation-delay:0.1s"><img src="exam_kit_1777705994730.png" alt="Exam Night Kit" /><div class="gallery-overlay"><i class="fab fa-instagram"></i></div></div>
+        <div class="gallery-item reveal-up" style="animation-delay:0.15s"><img src="fresh_start_kit_1777706042981.png" alt="Fresh Start Kit morning" /><div class="gallery-overlay"><i class="fab fa-instagram"></i></div></div>
+        <div class="gallery-item reveal-up" style="animation-delay:0.2s"><img src="festive_box_1777706559785.png" alt="Festive Edition Box" /><div class="gallery-overlay"><i class="fab fa-instagram"></i></div></div>
+        <div class="gallery-item reveal-up" style="animation-delay:0.25s"><img src="glow_kit_1777705900508.png" alt="Skincare ritual" /><div class="gallery-overlay"><i class="fab fa-instagram"></i></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NEWSLETTER ========== -->
+  <section id="newsletter" class="newsletter section-pad" aria-label="Newsletter subscription">
+    <div class="container">
+      <div class="newsletter-inner glass-card reveal-up">
+        <div class="newsletter-text">
+          <span class="section-tag">Stay in the loop</span>
+          <h2 class="section-title">Join the<br /><em>Pétale Circle</em></h2>
+          <p>Get early access to new launches, exclusive discounts, and skincare tips delivered straight to you.</p>
+        </div>
+        <form class="newsletter-form" id="newsletter-form" novalidate>
+          <div class="form-group">
+            <input type="text" id="nl-name" name="name" placeholder="Your Name" autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <input type="email" id="nl-email" name="email" placeholder="Your Email Address" autocomplete="email" required />
+          </div>
+          <button type="submit" class="btn-primary nl-submit" id="nl-submit">
+            <span class="btn-text">Join the Circle</span>
+            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+          </button>
+          <p class="form-note">We respect your privacy. Unsubscribe anytime.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#top" class="nav-logo footer-logo"><span class="logo-petal">✿</span> Pétale Skin Co.</a>
+          <p class="footer-tagline">Bloom into your best skin — naturally, luxuriously, beautifully.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Our Kits</a></li>
+            <li><a href="#why-us">Why Pétale</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Ingredient Glossary</a></li>
+            <li><a href="#">Skin Type Guide</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <address>
+            <p><i class="fas fa-envelope"></i> hello@petaleskinco.com</p>
+            <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Pétale Skin Co. All rights reserved. Made with <i class="fas fa-heart" style="color:#E8C7C8"></i> for your skin.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></a>
+
+  <script src="script.js"></script>
+</body>
+</html>
